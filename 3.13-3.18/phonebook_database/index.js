@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 // app.use(unknownEndpoint)
 
 
-const url = `mongodb+srv://harpreet7976:${password}@cluster0.xsnvkg0.mongodb.net/phoneBookDB?retryWrites=true&w=majority`
+const url = process.env.MONGODB_URI
 
 mongoose.set('strictQuery',false)
 mongoose.connect(url)
